@@ -29,7 +29,7 @@
         <td><input type="password" name="s_password"></td>
         </tr>
 
-        
+
 
         <tr>
             <td>Mobile No:</td>
@@ -41,7 +41,7 @@
 
     <tr>
 
-    
+
 
 
         <select name="s_gender" class="form-select">

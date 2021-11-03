@@ -1,7 +1,18 @@
 @extends('layout.outsideApp')
 @section('content')
 
-<form>
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
+<form action="{{route('login')}}" method="post">
+    @csrf
     <table>
 
 
@@ -12,12 +23,12 @@
 
 
         <td>Password:</td>
-        <td><input type="password" name="Password"></td>
+        <td><input type="password" name="s_password"></td>
         </tr>
 
 
         <tr>
-            <td><input type="submit" value="Login"> 
+            <td><input type="submit" value="Login">
         </tr>
         </table>
 
